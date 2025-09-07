@@ -11,7 +11,7 @@ A simple React project to display energy consumption data (kWh used) alongside a
     ├─ components/
     │ └─ ChartComponent.jsx # Chart component displaying the bar and line chart
     ├─ data/
-    │ └─ data.js # Sample data for the chart
+    │ └─ data.json # Sample data for the chart
     ├─ styles/
     │ └─ colors.js # Centralized color definitions
     ├─ app/
@@ -25,7 +25,7 @@ A simple React project to display energy consumption data (kWh used) alongside a
 
 - Responsive **ComposedChart** with bars for kWh used and line for temperature.
 - Centralized color palette in `styles/colors.js`.
-- Dynamic chart data imported from `data/data.js`.
+- Dynamic chart data imported from `data/data.json`.
 - Legend displayed at the top of the chart.
 
 ---
