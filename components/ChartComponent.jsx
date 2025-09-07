@@ -59,7 +59,7 @@ const ChartComponent = () => {
             top: 10,
             right: 10,
             left: 10,
-            bottom: 30,
+            bottom: 60,
           }}
         >
           <Legend
@@ -75,13 +75,14 @@ const ChartComponent = () => {
           <XAxis
             dataKey={isMobile ? "dateShort" : "date"}
             tick={{ fontSize: isMobile ? 10 : 12 }}
-            angle={isMobile ? -45 : 0}
-            textAnchor={isMobile ? "end" : "middle"}
+            interval={isMobile ? 1 : 0}
+            angle={-60}
+            textAnchor={"end"}
             height={isMobile ? 60 : 40}
             label={{
               value: "Date",
               position: "insideBottom",
-              offset: -10,
+              offset: isMobile ? -10 : -50,
               fontSize: 14,
               fontWeight: "bold",
             }}
@@ -122,7 +123,7 @@ const ChartComponent = () => {
             dataKey="temperature"
             stroke={COLORS.secondary}
             strokeWidth={2}
-            dot={{ fill: COLORS.secondary }}
+            dot={{ fill: COLORS.secondary, r: isMobile ? 2 : 5 }}
             name="Average Temperature"
           />
           <Bar
